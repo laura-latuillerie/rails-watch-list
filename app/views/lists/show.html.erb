@@ -1,0 +1,10 @@
+<%= render 'components/banner', title: "#{@list.name}", url: "movie_#{@list.id}.jpg", class: "position-relative" %>
+<div class="container bg-white rounded-4 p-4 position-absolute top-50 start-50 translate-middle-x">
+  <div class="row">
+    <div class="col text-end">
+      <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: "btn btn-primary" %>
+    </div>
+  </div>
+
+  <%= link_to 'Back', lists_path, class: "mt-2 btn btn-outline-primary" %>
+</div>

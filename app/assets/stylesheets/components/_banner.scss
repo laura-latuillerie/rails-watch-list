@@ -1,0 +1,11 @@
+.banner{
+  height: 50vh;
+  background-image: asset_url('bg-img.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  h1{
+    font-size: 4rem;
+  }
+}

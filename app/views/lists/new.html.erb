@@ -1,0 +1,11 @@
+<%= render 'components/banner', title: 'Create list', url: 'bg-img.jpg', class: "position-relative" %>
+<div class="container w-50 bg-white rounded-4 p-4 position-absolute top-50 start-50 translate-middle-x">
+  <div class="row">
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name, class: "text-start" %>
+      <%= f.submit class: "btn btn-primary m-auto" %>
+      <%= link_to "Back to Lists", lists_path, class: "btn btn-outline-secondary ms-2" %>
+    <% end %>
+  </div>
+  
+</div>
