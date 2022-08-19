@@ -2,8 +2,9 @@
 <div class="container bg-white rounded-4 p-4 position-absolute top-50 start-50 translate-middle-x">
   <div class="row">
   <h1 class="text-center"><%= @list.name %></h1>
+    <div class="grid">
       <% @list.movies.each do |movie| %>
-        <div class="col-sm-4 rounded-4 border">
+        <div class="rounded-4 border">
         <img src="<%= movie.poster_url %>" class="movie_poster obj-fit rounded-bottom rounded-4">
         <div class="p-3">
           <h4><strong><%= movie.title %></strong> | <%= movie.rating %>⭐</h4>
@@ -12,13 +13,18 @@
         </div>
         </div>
       <% end %>
+    
+      </div>
   </div>
-  <div class="row mt-5">
-  <h2 class="text-center">Create Bookmark</h2>
-    <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.input :movie, collection:  @movies %>
-    <%= f.input :comment %>
-    <%= f.submit class:"btn btn-success" %><%= link_to 'Back', lists_path, class: "ms-2 btn btn-outline-primary" %>
-    <% end %>
+  <div class="mt-5">
+    <h2 class="text-center">Create Bookmark</h2>
+ 
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+      <div>
+      <%= f.input :movie, collection:  @movies %>
+      <%= f.input :comment %>
+      <%= f.submit class:"btn btn-success" %><%= link_to 'Back', lists_path, class: "ms-2 btn btn-outline-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>
