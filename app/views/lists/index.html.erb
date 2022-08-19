@@ -6,7 +6,7 @@
     <% @lists.each do |list| %>
     <div class="col-sm-3 text-center my-2">
       <div class="card card-height border-0">
-        <%= cl_image_tag list.photo.key, height: "100%", class: "card-img obj-fit rounded-4" %>
+        <%= cl_image_tag "#{list.photo.key}", height: "100%", class: "card-img obj-fit rounded-4" %>
           <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-bg rounded-4">
             <%= link_to list.name, list_path(list), class: "fs-3 fw-bold text-decoration-none text-white" %>
           </div>
