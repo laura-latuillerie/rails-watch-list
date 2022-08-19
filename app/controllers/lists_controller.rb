@@ -7,6 +7,8 @@ class ListsController < ApplicationController
   end
 
   def show
+    @movies = Movie.all
+    @bookmark = Bookmark.new
   end
 
   def new
