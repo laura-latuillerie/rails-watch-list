@@ -7,8 +7,12 @@
     <div class="col-sm-3 text-center my-2">
       <div class="card card-height border-0">
         <%= cl_image_tag "#{list.photo.key}", height: "100%", class: "card-img obj-fit rounded-4" %>
-          <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-bg rounded-4">
-            <%= link_to list.name, list_path(list), class: "fs-3 fw-bold text-decoration-none text-white" %>
+          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center overlay-bg rounded-4">
+            <h3 class="text-light mb-4"><%= list.name %></h3>
+            <div>
+            <%= link_to "More", list_path(list), class: "btn btn-light" %>
+            <%= link_to "Delete", list_path(list), class: "btn btn-danger text-light" %>
+            </div>
           </div>
       </div>
     </div>
