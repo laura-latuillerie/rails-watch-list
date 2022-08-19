@@ -1,11 +1,11 @@
-<%= render 'components/banner', url: "lvaijmqkmfql37mh0zvj", class: "position-relative" %>
+<%= render 'components/banner', url: "5l8p7rx1drid1u8x6yr5fkhyqdan", class: "position-relative" %>
 <div class="container bg-white rounded-4 p-4 position-absolute top-50 start-50 translate-middle-x">
   <div class="row">
     <% counter = 0 %>
     <% @lists.each do |list| %>
     <div class="col-sm-3 text-center my-2">
       <div class="card card-height border-0">
-        <%= image_tag "movie_#{counter += 1}.jpeg", height: "100%", class: "card-img obj-fit rounded-4" %>
+        <%= cl_image_tag list.photo.key, height: "100%", class: "card-img obj-fit rounded-4" %>
           <div class="card-img-overlay d-flex align-items-center justify-content-center overlay-bg rounded-4">
             <%= link_to list.name, list_path(list), class: "fs-3 fw-bold text-decoration-none text-white" %>
           </div>
